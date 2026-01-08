@@ -1,0 +1,82 @@
+body {
+  display: flex;
+  flex-direction: column; /* Ini akan membuat elemen bertumpuk vertikal */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: linear-gradient(to right, #ff9a9e, #fad0c4);
+  font-family: Arial, sans-serif;
+  gap: 20px; /* Memberikan jarak antara Judul dan Kalkulator */
+}
+
+/* Media Query untuk Layar HP */
+@media (max-width: 480px) {
+  .calculator {
+    width: 90%; /* Kalkulator lebarnya jadi 90% layar */
+    padding: 15px;
+  }
+
+  button {
+    padding: 15px; /* Tombol dikecilkan sedikit agar muat */
+    font-size: 16px;
+  }
+
+  #display {
+    font-size: 20px; /* Tulisan di layar sedikit lebih kecil */
+    height: 45px;
+  }
+}
+
+h1 {
+  color: hsl(305, 86%, 36%);
+  margin: 15px; /* Menghilangkan margin bawaan agar tidak terlalu jauh */
+}
+
+.calculator {
+  background-color: #d4007c;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 10px 20px rgba(0,0,0,0.3);
+}
+
+#display {
+  width: 100%;
+  height: 50px;
+  font-size: 24px;
+  text-align: right;
+  margin-bottom: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  border: none;
+  background: #eee;
+  border-radius: 5px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+
+button {
+  padding: 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #ff89dc;
+  color: white;
+}
+
+button:hover { background-color: #777; }
+
+.operator { background-color: #ff31e3; }
+.operator:hover { background-color: #ff7bed; }
+
+.equals { 
+  background-color: #ff7bed; 
+  grid-row: span 1; 
+}
+
+.zero { grid-column: span 1; }
